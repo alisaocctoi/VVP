@@ -8,7 +8,7 @@ int main()
 {
 	int a, b, c;
 	cin >> a;
-	if (99 < a and a < 1000) {
+	if (99 < a && a < 1000) {
 		b = a / 100;
 		c = a % 100;
 		cout << c << b;
