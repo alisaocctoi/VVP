@@ -8,7 +8,7 @@ int main()
 	int a, b, c;
 	cout << "введите стороны треугольника";
 	cin >> a >> b >> c;
-	if (a < b + c and b < a + c and c < a + b) {
+	if (a < b + c && b < a + c && c < a + b) {
 		cout << "треугольник существует";
 	}
 	else {
