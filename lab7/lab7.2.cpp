@@ -13,7 +13,7 @@ int main()
 	cin >> b;
 	cout << "введите число C"
 	cin >> c;
-	if (a < b and b<c) {
+	if (a < b && b<c) {
 		cout << "неравенство справедливо";
 	}
 	else {
