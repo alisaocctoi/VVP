@@ -13,7 +13,7 @@ int main()
 	c = a % 100;
 	e = c / 10;
 	d = c % 10;
-	if (100<a and a < 1000 and b<e and e<d) or (a>100 and a < 1000 and d < e and e < b) {
+	if (100<a && a < 1000 && b<e && e<d) || (a>100 && a < 1000 && d < e && e < b) {
 		cout << "высказывание верно";
 	}
 	else {
