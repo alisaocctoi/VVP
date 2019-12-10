@@ -13,7 +13,7 @@ int main()
 	cin >> N;
 	int i;
 	double p;
-	p = 3.14;
+	p = 1;
 	for (i = 1; i < N + 1; i++)
 		p = p * (1 + 1 / pow(i, 2));
 	cout<< p;
