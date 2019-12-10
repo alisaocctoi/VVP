@@ -10,11 +10,12 @@ int main()
 	double b, i, a,c,d;
 	cout << "введите число";
 	cin >> b;
-	a = 1;
-	c = 10000;
-	for (i = 100; i < b; i++)
+	a = 0;
+	c = 0;
+	for (i = 100; i <= b; i++) {
 		a = a + 1;
 		c = c + i* i;
+	}
 	d = c / a;
 	cout << d;
 		
