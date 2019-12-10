@@ -8,11 +8,10 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	int N,b;
+	int N,b,p;
 	cout << "введите число N";
 	cin >> N;
 	int i;
-	double p;
 	p = 1;
 	for (i = 1; i < N + 1; i++)
 		p = p * (1 + 1 / pow(i, 2));
