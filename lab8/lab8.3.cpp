@@ -7,10 +7,17 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	int a, b, c;
-	cout << "введите 3 точки";
-	cin >> a >> b >> c;
-	if (a - b > a - c) {
+	int x1,y1, x2,y2, x3,y3;
+	float ab,ac;
+	cout << "введите координаты 1 точки";
+	cin >> x1>>y1;
+	cout << "введите координаты 2 точки";
+	cin >> x2>>y2;
+	cout << "введите координаты 3 точки";
+	cin >> x3>>y3;
+	ab=sqrt(pow(x1-x2, 2)+(pow(y1-y2,2);
+	ac=sqrt(pow(x1-x3,2)+(pow(y1-y3,2);
+	if (ac > ab) {
 		cout << "точка B ближе к точке A; ее расстояние от точки А = " << abs(a - b);
 	}
 	else {
