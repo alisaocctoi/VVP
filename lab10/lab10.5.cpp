@@ -14,7 +14,7 @@ int main()
 	b = 1;
 	c = 1;
 	d = -1;
-	for (i = 1; i = n; i++) {
+	for (i = 1; i <= n; i++) {
 		b = b * a;
 		b = d * b;
 		c = c + b;
