@@ -13,7 +13,7 @@ int main()
 	c = 1;
 	cout << "введите a и n";
 	cin >> a >> n;
-	for (i = 1; i = n; i++) {
+	for (i = 1; i <= n; i++) {
 		b = b * a;
 		c = c + b;
 	}
