@@ -9,9 +9,6 @@ int main()
 	int i = 0;
 	string s;
 	cin >>s;
-		if (s[i] >= 'a' && s[i] <= 'z') ; {
-		i++;
-	}
 		if (s[i] >= 'A' && s[i] <= 'Z'); {
 			i++;
 		}
