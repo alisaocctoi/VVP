@@ -7,7 +7,7 @@ int main()
 	int N;
 	cout << "введите n";
 	cin >> N;
-	int* a = new int[N];
+	int* a = new int[N*2];
 	cout << "введмите массив";
 	for (int i = 0; i < N; i++) {
 		cin >> a[i];
