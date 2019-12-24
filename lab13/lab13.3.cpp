@@ -7,19 +7,21 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Rus");
-	int n, a, b,c;
+	int n, a, b, j;
 	cout << "введите N, A, B ";
 	cin >> n >> a >> b;
 	int* arr = new int[n];
-	arr[0] = a;
-	arr[1] = b;
-	arr[2] = a+b;
-	for (int i = 3; i <= (n+2); i++)
+	for (int i = 2; i < n; i++)
 	{
-		arr[i] = arr[i - 1]*2; 
-		cout << arr[i]<<"  ";
+		arr[i] = 0;
+		for (j = 0; j < i; j++) {
+			arr[i] += arr[j];
+		}
 	}
-	
+	for (int i = 0; i < n; i++) {
+		cout << arr[i];
+	}
+
 	return 0;
 }
 
