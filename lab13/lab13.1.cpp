@@ -6,15 +6,13 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	int n, i, j;
-	j = 1;
+	int n, i;
 	cout << "введите N ";
 	cin >> n;
 	int* a = new int[n];
-	for (i = 0; i <= n - 1; i++) {
-		*(a + i) = j;
-		cout << j;
-		j = j + 2;
+	for (i = 0; i < n; i++) {
+		a[i] = (i * 2) + 1;
+		cout << a[i] << " " << endl;
 	}
 	return 0;
 }
