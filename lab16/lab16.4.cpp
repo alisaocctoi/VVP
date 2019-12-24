@@ -10,8 +10,8 @@ int main()
 	int N,b;
 	cout << "введите n";
 	cin >> N;
-	int* a = new int[N];
-	cout << "введмите массив";
+	int* a = new int[N*2];
+	cout << "введите массив";
 	for (int i = 0; i < N; i++) {
 		cin >> a[i];
 	}
