@@ -15,16 +15,16 @@ int main()
 	for (i = 1; i <= M; i++)
 	{
 
-		for (j = 1; j <= M; j++)
+		for (j = 0; j < M; j++)
 		{
 			
 			cin >> arr[i][j];
 		}
 
 	}
-	for (j = 1; j <= M; j++)
+	for (j = 0; j < M; j++)
 	{
-		for (i = 1; i <= N; i++)
+		for (i = 0; i < N; i++)
 		{
 			if (arr[i][j] % 2 != 0)
 			{
