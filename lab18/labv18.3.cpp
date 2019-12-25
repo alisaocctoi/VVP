@@ -11,24 +11,24 @@ int main()
 	cout << "введите м";
 	cin >> M;
 	cout << "введите матрицу";
-	for (i = 1; i <= M; i++)
+	for (i = 0; i < M; i++)
 	{
 	
 
-		for (j = 1; j <= N; j++)
+		for (j = 0; j < N; j++)
 		{
 			
 			cin >> arr[i][j];
 		}
 
 	}
-	for (i = 1; i <= M; i++)
+	for (i = 0; i < M; i++)
 	{
 		f *= arr[i][1];
 	}
-	for (j = 2; j <= N; j++)
+	for (j = 1; j < N; j++)
 	{
-		for (i = 1; i <= M; i++)
+		for (i = 0; i < M; i++)
 		{
 			d *= arr[i][j];
 		}
