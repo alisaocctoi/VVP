@@ -1,13 +1,12 @@
 ﻿#include <iostream>
 using namespace std;
-
 int main()
-{
-	char с;
-	cin >> с;
-	cout << static_cast<char>(с — 1) << static_cast<char>(с + 1);
-
-	return 0;
+{		
+	setlocale(LC_ALL, "Russian");
+	char c;	
+	cout << "Введите C: ";
+	cin >> c;
+	cout << char(int(c) - 1) << " " << c << " " << char(int(c) + 1) << endl;
 }
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
 // Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
