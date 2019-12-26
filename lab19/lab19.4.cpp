@@ -14,22 +14,22 @@ int main()
 	cin >> n;
 	cout << "введите матрицу " << endl;
 	int** a = new int* [n];
-	for (i = 1; i <= n; i++)
+	for (i = 0; i < n; i++)
 		a[i] = new int[m];
-	for (i = 1; i <= n; i++)
-		for (j = 1; j <= m; j++)
+	for (i = 0; i < n; i++)
+		for (j = 0; j < m; j++)
 			cin >> a[i][j];
 
-	for (i = 1; i <= n; i++) {
-		for (j = 1; j <= m; j++)
+	for (i = 0; i < n; i++) {
+		for (j = 0; j < m; j++)
 			cout << a[i][j];
 	}
-	for (i = 1; i <= n; i++)
+	for (i = 0; i < n; i++)
 	{
 		for (k = 1; k < n; k++)
 		{
 			if (a[k][1] > a[k + 1][1]) {
-				for (j = 1; j <= m; j++) {
+				for (j = 0; j < m; j++) {
 					c = a[k][j];
 					a[k][j] = a[k + 1][j];
 					a[k + 1][j] = c;
@@ -38,8 +38,8 @@ int main()
 			}
 		}
 	}
-	for (i = 1; i <= n; i++) {
-		for (j = 1; j <= m; j++)
+	for (i = 0; i < n; i++) {
+		for (j = 0; j < m; j++)
 			cout << a[i][j];
 		cout << endl;
 	}
