@@ -7,16 +7,17 @@ using namespace std;
 int main()
 {
 	char c;
+	cout<<"c:";
 	cin >> c;
 	int b;
 	string s;
 	cout << "string:";
-	cin >> s;
+	getline(cin, s);
 	for (int i = 0; i < s.length; i++)
 	{
 		if (s[i]==c)
 		{
-		
+			s.insert(i, 1, c);
 		}
 		cout << s[i];
 	}
