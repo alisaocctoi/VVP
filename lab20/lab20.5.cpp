@@ -8,16 +8,15 @@ int main()
 {
 	string s0;
 	cout << "string 2:";
-	cin >> s0;
+	getline(cin, s0);
 	string s;
 	cout << "string 1:";
-	cin >> s;
+	getline(cin, s);
 	int count = 0;
-	for (int i = 0; i < s.length(); i++) {
-		if (s[i] == s0[0]) {
-			count++;
-			}
-		}
+	while (s.find(s0) >= 0 && s.find(s0) < s.length() + 1)
+	{
+		s.erase(s.find(s0), s0.length());
+		count++;
 	}
 	cout << count;
 	return 0;
