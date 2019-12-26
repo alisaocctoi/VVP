@@ -6,13 +6,15 @@ using namespace std;
 
 int main()
 {
-	int i = 0;
+	int i = 0, a=0;
 	string s;
-	cin >>s;
+	getline(cin, s);
+	for (i = 0; i < s.length(); i++) {
 		if (s[i] >= 'A' && s[i] <= 'Z'); {
-			i++;
+			a++;
 		}
-	cout << i<< endl;
+	}
+	cout << a<< endl;
 	return 0;
 }
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
