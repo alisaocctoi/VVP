@@ -1,60 +1,62 @@
 ﻿// lab19.2.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
+// н.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+//
+#include <stdio.h>
 #include <iostream>
 using namespace std;
 int main()
 {
-	setlocale(LC_ALL, "Rus");
-	int arr[20][20], N, M, min, max, i, j, b, c, d = 0, f = 0, g = 0;
-	cout << "Enter M:";
-	cin >> M;
-	cout << "Enter N:";
-	cin >> N;
-	cout << "введите матрицу" << endl;
-	for (i = 0; i < M; i++)
-	{
-		for (j = 0; j < N; j++)
-			cin >> arr[i][j];
-
+	setlocale(LC_ALL, "Russian");
+	int n, m, i, j, c, min, max, d, b;
+	cout << "Введите m и n: ";
+	cin >> m >> n;
+	c = 0;
+	d = 0;
+	b = 0;
+	min = INT_MAX;
+	max = INT_MIN;
+	int** mat = new int* [n];
+	for (i = 0; i < n; i++) {
+		mat[i] = new int[m];
 	}
-	b = arr[1][1];
-	c = arr[1][1];
-	for (i = 0; i < M; i++)
+	cout << "Введите элементы матрицы:";
+	for (i = 0; i < n; i++) {
+		for (j = 0; j < m; j++) {
+			cin >> mat[i][j];
+		}
+	}
+	for (i = 0; i < n; i++)
 	{
-		for (j = 0; j < N; j++)
+		for (j = 0; j < m; j++)
 		{
-			if (arr[i][j] > b)
+			if (mat[i][j] < min)
 			{
-				b = arr[i][j];
+				min = mat[i][j];
 				d = j;
 			}
-			if (arr[i][j] < c)
+			if (mat[i][j] > max)
 			{
-				c = arr[i][j];
-				f = j;
+				max = mat[i][j];
+				b = j;
 			}
 		}
 	}
-	for (i = 0; i < N; i++)
+	for (i = 0; i < n; i++)
 	{
-		g = arr[i][d];
-		arr[i][d] = arr[i][f];
-		arr[i][f] = g;
+		c = mat[i][b];
+		mat[i][b] = mat[i][d];
+		mat[i][d] = c;
 	}
-	cout << "Max:   " << b;
-	cout << "Min:   " << c;
-	for (i = 0; i < N; i++)
-	{
-		for (j = 0; j < M; j++)
+	cout << "Преобразованная матрица: " << endl;
+	for (i = 0; i < n; i++) {
+		for (j = 0; j < m; j++)
 		{
-			cout << arr[i][j] << " ";
-		}
-		cout << endl;
-	}
-	cout << endl;
-	return 0;
-}
+			cout << mat[i][j];
 
+		}
+	}
+}
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
 // Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
 
